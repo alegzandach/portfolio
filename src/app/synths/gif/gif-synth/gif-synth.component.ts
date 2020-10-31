@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, Input, Output, EventEmitter, OnDestroy} from '@angular/core';
 import { Observable } from 'rxjs'
+import { ActivatedRoute } from '@angular/router'
 import * as SuperGif from '../../../utility/libgif.js'
 
 declare var require: any;
@@ -12,7 +13,10 @@ var Tone = require('tone/build/Tone');
   })
 
   export class GifSynthComponent implements AfterViewInit {
-    @Input() gifUrl: string
+
+    constructor(
+      private route: ActivatedRoute
+    ){}
 
     public showVid = true;
     public cam;
@@ -33,8 +37,8 @@ var Tone = require('tone/build/Tone');
     public rub;
     public synth;
     public gifCanvas;
-    //public gifUrl = 'https://media.giphy.com/media/J56c6H3S7qumk/giphy.gif'
-    public currentUrl = ''
+    public gifUrl = this.route.queryParams['value']['url'];
+    public currentUrl = '';
     public playing: boolean = false;
     public showInstructions: boolean = true;
     public instructions: string = "feed me a gif url in the box below, or use the one i pre-fed for you"
@@ -50,7 +54,7 @@ var Tone = require('tone/build/Tone');
 
     public async ngAfterViewInit() {
       this.synth = new Tone.PolySynth(4, Tone.Synth).toMaster();
-      this.loadGrid(this.gifUrl);
+      this.loadGrid(this.route.queryParams['value']['url']);
     }
 
     ngOnDestroy() {

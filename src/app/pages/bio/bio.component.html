@@ -1,11 +1,14 @@
-<table class="table">
-    <td class="bioCell">
-        <div class="bioStart">
-            hi i'm alex deutch. i'm a web developer and artist based in brooklyn, ny.  
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="row">
+        <div id="bioContainer" class="bioContainer col-6">
+            <div>hi i'm alex deutch. i'm a web developer and artist based in brooklyn, ny.</div>
         </div>
-    </td>
-    <td class="picCell">
-        <img class="picStart" src="../../../assets/headshot.jpg" (load)="transition()">
-    </td>
-</table>
-<div class="bgStart"></div>
+        <div id="picContainer" class="picContainer col-6">
+            <img src="../../../assets/headshot.jpg" (load)="transition()">
+        </div>
+    </div>
+</body>
+<div id="bg" class="bg"></div>

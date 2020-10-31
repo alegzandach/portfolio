@@ -1,5 +1,5 @@
 #hashlink {
-    display:block; 
+    display: block; 
     color:black;
     text-decoration: none; 
     cursor: pointer; 
@@ -9,9 +9,12 @@
 }
 
 #nav {
-    width: 100vw; 
+    width: 100vw;
     position: fixed;
     text-align: center;
+    margin: 0px;
+    max-width: 100%;
+    z-index: 1;
     #navContainer {
         width: 115px;
         margin: auto;
@@ -43,6 +46,7 @@
 #nav:hover {
     width: 100vw;
     position: fixed;
+    max-width: 100%;
     #navContainer {
         width: 115px;
         margin: auto;
