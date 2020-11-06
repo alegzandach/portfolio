@@ -1,13 +1,17 @@
 * {
     box-sizing: border-box;
   }
- 
+
 body {
     position: relative;
+    ul {
+        padding-inline-start: 40px;
+    }
     .listContainer {
         list-style-type: none;
         background-color:  #93ff85;
         margin: 7%;
+        padding: 3%;
     }
     .eduListContainer {
         display: flex;
@@ -30,7 +34,7 @@ body {
         width:50%;
         z-index: -2;
     }
-}  
+}
 
 @media only screen and (max-width: 600px) {
     [class*="col-"] {
