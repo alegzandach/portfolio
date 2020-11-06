@@ -1,15 +1,20 @@
-<table class="table">
-    <td class="td">
-        <div class="cell">
-            <span style="padding-right:10px">a noise generator that uses gifs as input</span>
-            <span class="button" (click)="navigate('projects/gifsynth/select')">gif synthesizer</span>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="row">
+        <div class="cell col-6">
+            <div>
+                <span style="padding-right:10px">a noise generator that uses gifs as input</span>
+                <button (click)="navigate('projects/gifsynth/select')">gif synthesizer</button>
+            </div>
         </div>
-    </td>
-    <td class="td">
-        <div class="cell">
-            <div style="padding-bottom:20px">an ep made with a friend</div>
-            <iframe style="border: 0; width: 70%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2375449111/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://diller.bandcamp.com/album/diller-ii">Diller II by Diller</a></iframe>
+        <div class="cell col-6">
+            <div>
+                <div style="padding-bottom:20px; padding-top: 0px !important">an ep made with a friend</div>
+                <iframe style="border: 0; width: 70%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2375449111/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://diller.bandcamp.com/album/diller-ii">Diller II by Diller</a></iframe>
+            </div>
         </div>
-    </td>
-</table>
-<div class="bg"></div>
+    </div>
+    <div id="bg" class="bg"></div>
+</body>

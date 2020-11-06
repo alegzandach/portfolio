@@ -4,7 +4,7 @@ import { NavComponent } from '../../components/nav/nav.component'
 @Component({
     selector: 'contact-page',
     templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.css']
+    styleUrls: ['./contact.component.scss']
   })
 
   export class ContactComponent implements OnInit {
