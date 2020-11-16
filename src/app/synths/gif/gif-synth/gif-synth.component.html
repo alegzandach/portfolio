@@ -1,16 +1,13 @@
-<div id="biggestContainer" style="display: flex; flex-direction: column; height: 97vh; width: 98vw">
-    <div id="bigContainer" style="flex-grow: 1; margin-right: 8px;">
+<div id="biggestContainer" class="full-screen-div" style="display: flex; flex-direction: column; height: 100%; width: 100vw; max-width:100%;">
+    <div id="bigContainer" style="flex-grow: 1; justify-content: center;">
         <img [hidden]="true" #img rel:animated_src="">
     </div>
-    <div style="margin: auto">
+    <div style="margin: auto; height: 40px">
         <div *ngIf="!playing" (click)="play()" style="text-align:center; width: 5rem; border-style: solid; padding: 5px; cursor: pointer">
             play
         </div>
         <div *ngIf="playing" (click)="pause()" style="text-align:center; width: 5rem; border-style: solid; padding: 5px; cursor: pointer">
             pause
-        </div>
-        <div (click)="back()" style="text-align:center; width: 5rem; border-style: solid; padding: 5px; margin-top: 5px; cursor: pointer">
-            back
         </div>
     </div>
     <!--<div style="text-align: center;">

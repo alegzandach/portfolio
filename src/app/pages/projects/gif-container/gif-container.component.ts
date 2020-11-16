@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
 
 @Component({
     selector: 'gif-container',
@@ -7,16 +7,17 @@ import { Router } from '@angular/router';
   })
 
   export class GifContainer {
+    
+    constructor(
+      private activatedroute: ActivatedRoute
+    ){}
+
     public gifUrl = '';
     public showSearch = true;
 
-    constructor(
-      private router: Router
-    ) {}
-
-    public load = (url) => {
+    public load = () => {
       this.showSearch = false
-      this.gifUrl = url
+      this.gifUrl = this.activatedroute.queryParams['value']['url']
     }
 
     public back = () => {

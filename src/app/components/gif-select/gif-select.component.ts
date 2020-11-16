@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, OnInit, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import * as giphy from 'giphy-api/dist/giphy-api.bundle'
 
 @Component({
@@ -8,6 +8,11 @@ import * as giphy from 'giphy-api/dist/giphy-api.bundle'
   })
 
   export class GifSelectComponent implements OnInit{
+
+    constructor(
+      private router: Router,
+      private route: ActivatedRoute
+    ){}
 
     public giphyObj;
     public gifList = [];
@@ -25,7 +30,13 @@ import * as giphy from 'giphy-api/dist/giphy-api.bundle'
     gifEmit: EventEmitter<string> = new EventEmitter<string>()
 
     public emitGif = (gifUrl) => {
-      this.gifEmit.emit(gifUrl);
+      this.router.navigate(['/projects/gifsynth/select/play'], {
+        relativeTo: this.route,
+        queryParams: {
+          url: `${gifUrl}`
+        },
+        queryParamsHandling: 'merge',
+      })
     }
 
     public search = (term) => {

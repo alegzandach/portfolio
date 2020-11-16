@@ -4,21 +4,19 @@ import { NavComponent } from '../../components/nav/nav.component'
 @Component({
     selector: 'bio-page',
     templateUrl: './bio.component.html',
-    styleUrls: ['./bio.component.css']
+    styleUrls: ['./bio.component.scss']
   })
 
-  export class BioComponent implements OnInit{
-    ngOnInit(): void {
-     
-    }
-
+  export class BioComponent {
     public transition = () => {
-      let bio = document.querySelector("div.bioStart");
-      let pic = document.querySelector("img.picStart");
-      let bg = document.querySelector("div.bgStart");
+      let bio = document.getElementById("bioContainer");
+      let pic = document.getElementById("picContainer");
+      let bg = document.getElementById("bg");
 
-      bio.className = "bio"
-      pic.className = "pic"
-      bg.className = "bg"
+      bio.style.transform = "translate(0%)"
+      bio.style.opacity = "100"
+      pic.style.transform = "translate(0%)"
+      pic.style.opacity = "100"
+      bg.style.opacity = "100"
     }
   };
