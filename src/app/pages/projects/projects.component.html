@@ -1,19 +1,29 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="row">
-        <div class="cell col-6">
-            <div>
-                <span style="padding-right:10px">a noise generator using gifs as input</span>
-                <button (click)="navigate('projects/gifsynth/select')">gif synthesizer</button>
-            </div>
-        </div>
-        <div class="cell col-6">
-            <div>
-                <div style="padding-bottom:20px; padding-top: 0px !important">an ep made with a friend</div>
-                <iframe style="border: 0; width: 70%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2734071004/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://diller.bandcamp.com/album/nice-that-like">Nice That Like by Diller</a></iframe>            </div>
-        </div>
+<div class="page">
+  <div class="cell col-6">
+    <div>
+      <span style="padding-right: 10px"
+        >a noise generator using gifs as input</span
+      >
+      <button (click)="navigate('projects/gifsynth/select')">
+        gif synthesizer
+      </button>
     </div>
-    <div id="bg" class="bg"></div>
-</body>
+  </div>
+  <div class="cell col-6">
+    <div>
+      <div style="padding-bottom: 20px; padding-top: 0px !important">
+        an ep made with a friend
+      </div>
+      <iframe
+        style="border: 0; width: 70%; height: 120px"
+        src="https://bandcamp.com/EmbeddedPlayer/album=2734071004/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+        seamless
+        ><a href="https://diller.bandcamp.com/album/nice-that-like"
+          >Nice That Like by Diller</a
+        ></iframe
+      >
+    </div>
+  </div>
+
+  <div id="bg" class="bg"></div>
+</div>

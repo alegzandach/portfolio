@@ -1,84 +1,76 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-body {
-    position: relative;
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    overflow-x: hidden;
-    .bioContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        transform:translate(-100%);
-        opacity: 0;
-        transition-property: transform opacity;
-        transition-duration: .5s;
-        transition-timing-function: cubic-bezier();
-        div{
-            margin: auto;
-            width: 80%;
-            padding-top: 20px;
-            padding-bottom:20px;
-            vertical-align: middle;
-            text-align: center;
-            background-color: #00a2ff;
-        }
-    }
-    .picContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        transform:translate(100%);
-        opacity: 0;
-        transition-property: transform opacity;
-        transition-duration: .5s;
-        transition-timing-function: cubic-bezier();
-        img{
-            width:100%;
-            height:100%;
-            object-fit: contain;
-            overflow: hidden;
-            padding:10px;
-            margin: auto;
-        }
-    }
-    .bg {
-        position: absolute;
-        top:25%;
-        left:25%;
-        background-color:yellow;
-        height:50%;
-        width:50%;
-        z-index: -2;
-        opacity: 0;
-        transition-property: transform opacity;
-        transition-duration: .5s;
-        transition-timing-function: cubic-bezier();
-    }
+.bioContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  transform: translate(-100%);
+  opacity: 0;
+  transition-property: transform opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier();
+  div {
+    margin: auto;
+    width: 80%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #00a2ff;
+  }
+}
+.picContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  transform: translate(100%);
+  opacity: 0;
+  transition-property: transform opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier();
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    padding: 10px;
+    margin: auto;
+  }
+}
+.bg {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background-color: rgb(0, 2, 145);
+  height: 50%;
+  width: 50%;
+  z-index: -2;
+  opacity: 0;
+  transition-property: transform opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier();
 }
 
 @media only screen and (max-width: 600px) {
-    [class*="col-"] {
-        width: 100%;
-        height: 50vh;
-    }
-    .picContainer{
-        width: 0px;
-        height: 0px;
-    }
-    .bg {
-        top: 0% !important;
-        left:0% !important;
-        height: 100% !important;
-        width: 100% !important;
-        background-image: url("../../../assets/headshot.jpg");
-        background-size: cover;
-        background-position: center;
-    }
+  [class*="col-"] {
+    width: 100%;
+    height: 100vh;
+  }
+  .picContainer {
+    width: 0px;
+    height: 0px;
+  }
+  .bg {
+    top: 0% !important;
+    left: 0% !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-image: url("../../../assets/headshot.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }

@@ -1,21 +1,18 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { NavComponent } from '../../components/nav/nav.component'
+import { Component, ElementRef, ViewChild, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { NavComponent } from "../../components/nav/nav.component";
 
 @Component({
-    selector: 'projects-page',
-    templateUrl: './projects.component.html',
-    styleUrls: ['./projects.component.scss']
-  })
+  selector: "projects-page",
+  templateUrl: "./projects.component.html",
+  styleUrls: ["./projects.component.scss"],
+})
+export class ProjectsComponent {
+  public view = "list";
 
-  export class ProjectsComponent {
-    public view = 'list'
+  constructor(private router: Router) {}
 
-    constructor(
-      private router: Router
-    ) {}
-
-    public navigate = (page) => {
-      this.router.navigate([`/${page}`])
-    }
+  public navigate = (page) => {
+    this.router.navigate([`/${page}`]);
   };
+}

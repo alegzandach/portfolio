@@ -1,14 +1,11 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="row">
-        <div id="bioContainer" class="bioContainer col-6">
-            <div>hi i'm alex deutch. i'm a web developer and artist based in brooklyn, ny</div>
-        </div>
-        <div id="picContainer" class="picContainer col-6">
-            <img src="../../../assets/headshot.jpg" (load)="transition()">
-        </div>
+<div class="page">
+  <div id="bioContainer" class="bioContainer col-6">
+    <div>
+      hi i'm alex deutch. i'm a web developer and artist based in brooklyn, ny
     </div>
-    <div id="bg" class="bg"></div>
-</body>
+  </div>
+  <div id="picContainer" class="picContainer col-6">
+    <img src="../../../assets/headshot.jpg" (load)="transition()" />
+  </div>
+  <div id="bg" class="bg"></div>
+</div>
