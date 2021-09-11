@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-.page {
-  min-height: none;
-  height: auto !important;
-}
-
 ul {
   padding-inline-start: 40px;
 }
@@ -42,6 +37,11 @@ ul {
   [class*="col-"] {
     width: 100%;
     height: auto;
+  }
+
+  .page {
+    min-height: none;
+    height: auto !important;
   }
 
   .skills {
